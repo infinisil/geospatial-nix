@@ -215,6 +215,10 @@
                 inherit gdal geos pdal proj;
               };
 
+              grass-addons = pkgs.callPackage ./pkgs/grass/addons.nix {
+                inherit grass;
+              };
+
 
               # QGIS
               qgis-python =
@@ -305,6 +309,7 @@
 
                   # Applications
                   grass
+                  grass-addons
                   qgis
                   qgis-unwrapped
                   qgis-ltr
